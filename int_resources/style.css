@@ -35,13 +35,22 @@ h1, h2, h3, h4, h5, h6, button, a, p, i, b, span{
 }
 
 h1{
-    font-size:min(60px, 5vw);
+    font-size:60px;
+}
+h2{
+    font-size:48px;
+}
+h3{
+    font-size:28px;
 }
 
 @media screen and (width < 1400px){
 
     h1{
         font-size:min(46px, 7vw);
+    }
+    h2{
+        font-size:min(36px, 6vw);
     }
     
 }
@@ -242,14 +251,6 @@ main{
     transform:rotate(180deg);
 }
 
-@media screen and (992px <= width < 1200px){
-
-    .hero-left{
-        padding:64px 64px 64px 0.75rem !important;
-    }
-    
-}
-
 @media screen and (width < 992px){
 
     .carousel{
@@ -284,6 +285,110 @@ main{
         height:550px;
     }
 }
+
+
+
+    /* Section Heading */
+
+.section-heading{
+    padding-top:120px;
+    padding-bottom:96px;
+}
+
+.subtitle{
+    color:var(--color1);
+    font-size:12px;
+    font-family:font2;
+}
+
+.section-title i{
+    font-family:font2;
+}
+
+.section-text{
+    max-width:710px;
+}
+
+
+
+    /* Offer Section */
+
+.offer-section{
+    min-height:200px;
+    background-color:var(--color3);
+}
+
+.offer-section .section-heading{
+    padding-left:120px;
+    padding-right:120px;
+}
+
+.cards{
+    padding-bottom:160px;
+}
+
+.card{
+    flex:1;
+    height:370px;
+    padding:48px 40px;
+    border-radius:28px;
+}
+
+.card-icon{
+    width:44px;
+    aspect-ratio:1/1;
+    margin-bottom:32px;
+}
+
+.card-title{
+    margin-bottom:12px;
+}
+
+.card-text{
+    font-size:14px;
+}
+
+.card-link{
+    margin-top:auto;
+    padding-bottom:4px;
+    color:var(--color1);
+    border-bottom:solid 1px var(--color1);
+
+    & span img{
+        height:16px;
+        padding-left:4px;
+        transform:rotate(-90deg);
+    }
+
+}
+
+@media screen and (width < 1200px){
+
+    .card-link{
+        font-size:14px;
+    }
+    
+}
+
+@media screen and (width < 992px){
+
+    .offer-section .section-heading{
+        padding-left:0;
+        padding-right:0;
+    }
+
+    .card{
+        flex:100%;
+        height:auto;
+        min-height:350px;
+    }
+
+    .card-link{
+        margin-top:40px;
+    }
+    
+}
+
 
 
 
@@ -418,4 +523,5 @@ main{
         width:auto;
         flex:1;
     }
+
 }
