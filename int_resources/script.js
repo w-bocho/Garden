@@ -83,12 +83,13 @@ for (let item = 0; item < 69; item++){
     const galleryImg = document.createElement("img");
     galleryImg.classList.add("gallery-img");
     galleryImg.setAttribute("alt", "Gallery Image");
+    galleryImg.setAttribute("loading", "lazy");
 
     // Set the image source (random size, random image)
     // The image size is small, so they can load quickly
     const randValH = getRandomInt(6, 10);
     const randValW = getRandomInt(4, 12);
-    const srcPath = `https://picsum.photos/${randValH}00/${randValW}00?random=${item}.webp`;
+    const srcPath = `https://picsum.photos/${randValW}00/${randValH}00?random=${item}.webp`;
     galleryImg.setAttribute("src", srcPath);
     galleryImg.setAttribute("galleryIndex", item);
     galleryItem.appendChild(galleryImg);
