@@ -8,6 +8,7 @@
     --color1:#1B5B31;
     --color2:#DCC1AB;
     --color3:#F5F0EC;
+    --color4:#111111;
 }
 
 @font-face{
@@ -88,7 +89,7 @@ main{
     z-index:1000;
 
     .nav-item:not(:nth-last-of-type(1)){
-        border-bottom:solid 1px #111;
+        border-bottom:solid 1px var(--color4);
     }
 }
 
@@ -120,20 +121,46 @@ main{
     }
 
     .nav-item{
+        order:1;
         width:100% !important;
         display:flex;
         justify-content:flex-end;
-        border-bottom:solid 1px #111;
+        border-bottom:solid 1px var(--color4);
     }
 
-    .nav-item:nth-last-of-type(1){
+    .nav-item:is(:nth-last-of-type(1), :nth-last-of-type(2)){
         border:none;
     }
 
-    .nav-link:not(.search-box){
+    .search-nav-item{
+        order:0;
+        padding-bottom:16px;
+    }
+
+    .nav-link:not(.search-box, button){
         width:100%;
         display:flex;
         justify-content:flex-end;
+    }
+
+}
+
+@media screen and (width >= 992px){
+
+    .remove-container{
+        width:inherit !important;
+        max-width:inherit !important;
+        padding:inherit !important;
+        margin:inherit !important;
+    }
+
+}
+
+@media screen and (width < 576px){
+
+    .navbar-nav{
+        padding-left:0;
+        padding-right:0;
     }
 
 }
@@ -148,6 +175,7 @@ main{
 
 .search-input{
     width:0;
+    min-width:0;
     height:32px;
     padding:0;
 
@@ -162,7 +190,7 @@ main{
 }
 
 .search-open .search-input{
-    width:min(300px, calc(100vw - 110px));
+    width:300px;
     padding:0 8px;
     border-color:var(--color1);
 }
@@ -182,17 +210,57 @@ main{
 }
 
 
+@media screen and (width < 992px){
 
-    /* Hero */
+    .search-box{
+        width:100%;
+        display:flex;
+        align-items:center;
+        gap:8px;
+    }
+
+    .search-input,
+    .search-open .search-input{
+        flex:1;
+        width:auto;
+        padding:0 8px;
+
+        position:static;
+        transform:translate(0, 0);
+        border-color:var(--color1);
+    }
+
+}
+
+
+
+    /* Hero & About Section */
 
 .carousel{
     height:750px;
     background-color:var(--color2);
 }
 
+.about-section{
+    height:720px;
+    background-color:var(--color1);
+
+    & *{
+        color:var(--color3) !important;
+    }
+
+    & h2{
+        max-width:250px;
+    }
+}
+
 .hero-left{
     height:100%;
     padding:144px 64px 144px 0.75rem !important;
+}
+
+.about-section .hero-left{
+    padding:144px 96px !important;
 }
 
 .hero-btn{
@@ -211,11 +279,23 @@ main{
     color:var(--color1);
 }
 
+.about-section .hero-btn2{
+    border:solid 1px var(--color3);
+
+    & img{
+        transform:rotate(-90deg);
+    }
+}
+
 .hero-right{
-    width:50vw;
+    width:calc(50vw - 32px);
     position:absolute;
     top:0;
-    left:50%;
+    left:calc(50% + 32px);
+}
+
+.about-section .hero-right{
+    left:0;
 }
 
 .hero-right img{
@@ -239,7 +319,6 @@ main{
 .hero-nav button{
     width:96px;
     aspect-ratio:1/1;
-
     position:static !important;
 
     display:flex;
@@ -251,16 +330,34 @@ main{
     transform:rotate(180deg);
 }
 
+@media screen and (width < 1200px){
+
+    .about-section .hero-left{
+        padding:96px !important;
+    }
+    
+}
+
 @media screen and (width < 992px){
 
-    .carousel{
+    .carousel,
+    .about-section{
         height:auto;
     }
 
-    .hero-left{
+    .hero-left,
+    .about-section .hero-left{
         width:720px;
         height:460px;
         padding:64px 0.75rem !important;
+    }
+
+    .about-section .hero-left{
+        height:auto;
+
+        & h2{
+            max-width:none;
+        }
     }
 
     .hero-right{
@@ -449,9 +546,9 @@ main{
     justify-content:center;
     align-items:center;
 
-    color:#111;
+    color:var(--color4);
     background-color:transparent;
-    border:solid 1px #111;
+    border:solid 1px var(--color4);
     border-radius:200px;
     z-index:1000;
 }
@@ -498,9 +595,9 @@ main{
     justify-content:center;
     align-items:center;
 
-    color:#111;
+    color:var(--color4);
     background-color:transparent;
-    border:solid 1px #111;
+    border:solid 1px var(--color4);
     border-radius:200px;
 }
 
@@ -522,6 +619,158 @@ main{
     .gm-btn{
         width:auto;
         flex:1;
+    }
+
+}
+
+
+
+    /* Insta */
+
+.insta{
+    padding:60px 190px;
+    background-color:var(--color3);
+
+    & *{
+        color:var(--color3);
+    }
+}
+
+.insta .container{
+    padding:120px 110px;
+    background-color:var(--color1);
+}
+
+.insta h3{
+    font-size:40px !important;
+}
+
+.insta-right{
+    width:170px;
+
+    & a{
+        padding:12px 24px;
+        background-color:var(--color3);
+        color:var(--color1) !important;
+        border-radius:200px;
+    }
+
+}
+
+@media screen and (width < 1400px){
+
+    .insta-left h3{
+        font-size:min(32px, 5.5vw) !important;
+    }
+
+    .insta-right{
+        width:auto;
+    }
+
+}
+
+@media screen and (width < 1200px){
+
+    .insta{
+        padding:60px;
+    }
+
+}
+
+@media screen and (width < 768px){
+
+    .insta{
+        padding:0;
+    }
+
+    .insta .container{
+        width:100%;
+        max-width:none;
+        margin:0;
+        padding:96px 48px;
+        background-color:var(--color1);
+    }
+
+}
+
+
+
+    /* Footer */
+
+footer{
+    min-height:500px;
+    padding:80px 190px;
+    background-color:var(--color4);
+
+    & *{
+        color:var(--color3);
+        text-align:center;
+    }
+
+}
+
+.footer-section1{
+    padding-bottom:62px;
+    margin-bottom:62px;
+    border-bottom:solid 1px var(--color3);
+
+    & a{
+        padding:12px 24px;
+        background-color:var(--color1);
+        border-radius:200px;
+    }
+
+}
+
+.footer-logo{
+    width:115px;
+}
+
+.footer-more{
+    gap:48px;
+}
+
+.footer-section3{
+    padding-top:62px;
+}
+
+@media screen and (width < 1200px){
+
+    footer{
+        padding:80px 60px;
+    }
+
+}
+
+@media screen and (width < 992px){
+
+    .footer-contact{
+        gap:8px;
+    }
+
+}
+
+@media screen and (width < 768px){
+
+    footer{
+        padding:80px 48px;
+    }
+
+    .footer-inner{
+        max-width:none;
+    }
+
+}
+
+@media screen and (width < 576px){
+
+    .footer-info a{
+        font-size:14px;
+    }
+
+    .footer-more a{
+        flex:40%;
+        text-align:center;
     }
 
 }

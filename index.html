@@ -32,38 +32,35 @@
     <ul class="navbar-nav collapse navbar-collapse
         justify-content-lg-end justify-content align-items-end align-items-lg-center gap-lg-5" id="navbar-links">
 
-        <li class="nav-item position-relative">
+        <li class="nav-item container remove-container position-relative">
             <button class="nav-link nav-sublist-btn collapsed" data-bs-toggle="collapse" data-bs-target="#nav-list" aria-controls="nav-list">Oferta <span><img src="int_resources/img/nav-arrow.svg"></span></button>
 
             <ul class="nav-sublist collapse list-unstyled" id="nav-list">
                 <li class="nav-item">
-                    <a href="https://github.com/newhorizonweb" class="nav-link">GitHub</a>
+                    <a href="https://github.com/newhorizonweb" class="nav-link">Projekty</a>
                 </li>
                 <li class="nav-item">
-                    <a href="https://www.linkedin.com/in/wojciech-bocho/" class="nav-link">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/wojciech-bocho/" class="nav-link">Wizualizacje</a>
                 </li>
                 <li class="nav-item">
-                    <a href="https://github.com/newhorizonweb" class="nav-link">GitHub</a>
-                </li>
-                <li class="nav-item">
-                    <a href="https://www.linkedin.com/in/wojciech-bocho/" class="nav-link">LinkedIn</a>
+                    <a href="https://github.com/newhorizonweb" class="nav-link">Realizacje</a>
                 </li>
             </ul>
         </li>
 
-        <li class="nav-item">
-            <a href="https://github.com/newhorizonweb" class="nav-link">O firmie</a>
+        <li class="nav-item container remove-container">
+            <a href="#about-section" class="nav-link">O firmie</a>
         </li>
 
-        <li class="nav-item">
-            <a href="https://github.com/newhorizonweb" class="nav-link">Realizacje</a>
+        <li class="nav-item container remove-container">
+            <a href="#offer-section" class="nav-link">Realizacje</a>
         </li>
 
-        <li class="nav-item">
-            <a href="https://github.com/newhorizonweb" class="nav-link">Kontakt</a>
+        <li class="nav-item container remove-container">
+            <a href="#contact" class="nav-link">Kontakt</a>
         </li>
 
-        <li class="nav-item">
+        <li class="search-nav-item nav-item container remove-container">
             <a href="#" class="nav-link search-box">
                 <input type="text" class="search-input">
                 <div class="search-icon"></div>
@@ -76,7 +73,8 @@
 </nav>
 
 <main>
-<div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
+
+<div id="carousel-hero" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
     <div class="carousel-inner h-100">
 
         <div class="carousel-item active h-100">
@@ -161,16 +159,16 @@
     </div>
 
     <div class="hero-nav">
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-hero" data-bs-slide="prev">
             <img src="int_resources/img/full-arrow.svg" alt="Hero Navigation Previous Arrow">
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel-hero" data-bs-slide="next">
             <img src="int_resources/img/full-arrow.svg" alt="Hero Navigation Next Arrow">
         </button>
     </div>
 </div>
 
-<div class="offer-section">
+<div class="offer-section" id="offer-section">
     <div class="container">
         <div class="section-heading row container">
             <p class="subtitle mb-2">Realizacje</p>
@@ -233,6 +231,34 @@
     </div>
 </div>
 
+<div class="about-section position-relative" id="about-section">
+    <div class="container-lg h-100">
+        <div class="row h-100 d-flex justify-content-center justify-content-lg-end">
+
+            <div class="hero-left col-lg-6 d-flex flex-column justify-content-between align-items-start">
+                <div>
+                    <p class="subtitle mb-2">O firmie</p>
+                    <h2>Tworzymy z <i>pasją</i></h2>
+                    <p class="m-0 mb-5 mt-5">Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą wykwalifikowani projektanci oraz architekci, których zadaniem jest rozpoznanie i realizacja potrzeb każdego Klienta. Nasza specjalizacja to przestrzenie nowoczesne, które charakteryzuje minimalizm, geometria i elegancka prostota. Tworzymy ogrody małoobsługowe, dostosowane do współczesnego trybu życia.</p>
+                </div>
+                <div class="d-flex flex-column flex-sm-row flex-lg-column flex-xl-row gap-4 ms-auto ms-sm-0">
+                    <a href="#gallery-div" class="hero-btn hero-btn2 text-center">
+                        Poznaj nas bliżej
+                        <span class="ms-1">
+                            <img src="int_resources/img/arrow-btn-white.svg" alt="Bottom Arrow">
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-right h-100 p-0 d-flex align-items-center">
+                <img src="int_resources/img/hero-img1.jpg" alt="Hero Image 1" class="w-100">
+            </div>
+
+        </div>
+    </div>
+</div>
+
 <div class="gallery-div" id="gallery-div">
     <div class="section-heading container">
         <p class="subtitle mb-2">Oferta</p>
@@ -272,7 +298,73 @@
         </div>
     </div>
 </div>
+
+<div class="insta">
+    <div class="container d-flex flex-column flex-xxl-row gap-5 gap-xxl-0">
+        <div class="insta-left flex-grow-1">
+            <h3 class="m-0">Zostańmy w kontakcie!</h3>
+            <h3 class="m-0">Znajdziesz nas na <i>Instagramie.</i></h3>
+        </div>
+        <div class="insta-right d-flex flex-column 
+        flex-sm-row flex-xxl-column 
+        justify-content-end align-items-end align-items-sm-center align-items-xxl-start gap-3">
+            <p class="m-0 text-end text-sm-start">Śledź nasze najnowsze realizacje!</p>
+            <a href="https://github.com/newhorizonweb" class="text-decoration-none text-center">Instagram</a>
+        </div>
+    </div>
+</div>
+
 </main>
+
+<footer class="d-flex">
+    <div class="footer-inner container 
+    mh-100 p-0 d-flex flex-column">
+        <div class="footer-section footer-section1
+        d-flex justify-content-between 
+        align-items-center align-items-lg-center gap-3
+        flex-column flex-lg-row">
+            <img src="int_resources/img/logo-white.svg" alt="Company Logo" class="footer-logo">
+
+            <div class="footer-info d-flex 
+            align-items-center align-items-md-center
+            flex-column flex-lg-row gap-3">
+                <p class="mb-0">Daj znać, co możemy dla Ciebie zrobić!</p>
+                <a href="https://github.com/newhorizonweb" class="text-decoration-none">Skontaktuj się z nami</a>
+            </div>
+        </div>
+
+        <div class="footer-section footer-section2
+        d-flex align-items-center align-items-lg-center 
+        justify-content-between gap-5 gap-lg-3
+        flex-column flex-lg-row">
+            <div class="footer-more d-flex flex-wrap row-gap-1">
+                <a href="https://github.com/newhorizonweb" class="text-decoration-none">Kontakt</a>
+                <a href="https://github.com/newhorizonweb" class="text-decoration-none">Instagram</a>
+                <a href="https://github.com/newhorizonweb" class="text-decoration-none">Facebook</a>
+                <a href="https://github.com/newhorizonweb" class="text-decoration-none">LinkedIn</a>
+            </div>
+
+            <div class="footer-more footer-contact d-flex 
+            align-items-center align-items-md-center
+            flex-column flex-lg-row">
+                <p class="m-0">000-000-000</p>
+                <p class="m-0">giarddesign@kontakt.pl</p>
+            </div>
+        </div>
+
+        <div class="footer-section footer-section3 mt-auto
+        d-flex align-items-center align-items-lg-center 
+        justify-content-between gap-1
+        flex-column flex-lg-row">
+            <p class="m-0">Prawa zastrzeżone © 2022</p>
+
+            <div class="footer-more d-flex gap-2">
+                <p class="m-0 ms-auto">made by</p>
+                <img src="int_resources/img/adRespect-logo.svg" alt="adRespect Logo">
+            </div>
+        </div>
+    </div>
+</footer>
   
 </body>
 </html>
