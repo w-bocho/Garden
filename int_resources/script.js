@@ -15,6 +15,9 @@ searchIcon.innerHTML = "<svg version='1.1' id='Layer_1' xmlns='http://www.w3.org
 // Toggle the searchbox open class
 searchIcon.addEventListener("click", function(){
     searchBox.classList.toggle("search-open");
+
+    // Add focus to the input
+    searchInp.focus();
 });
 
 // Remove the searchbox open class on "Enter" button click

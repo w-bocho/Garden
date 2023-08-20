@@ -30,40 +30,56 @@
     </button>
 
     <ul class="navbar-nav collapse navbar-collapse
-        justify-content-lg-end justify-content align-items-end align-items-lg-center gap-lg-5" id="navbar-links">
+        justify-content-lg-end align-items-end align-items-lg-center gap-lg-3" id="navbar-links">
 
         <li class="nav-item container remove-container position-relative">
             <button class="nav-link nav-sublist-btn collapsed" data-bs-toggle="collapse" data-bs-target="#nav-list" aria-controls="nav-list">Oferta <span><img src="int_resources/img/nav-arrow.svg"></span></button>
 
-            <ul class="nav-sublist collapse list-unstyled" id="nav-list">
+            <ul class="nav-sublist collapse list-unstyled 
+            mt-lg-2 p-lg-2" id="nav-list">
                 <li class="nav-item">
-                    <a href="https://github.com/newhorizonweb" class="nav-link">Projekty</a>
+                    <a href="https://github.com/newhorizonweb" class="nav-link me-4 me-lg-0
+                    text-start text-lg-center">
+                    <span>Projekty</span>
+                    </a>
+                </li>
+                <li class="nav-item mt-lg-2 mb-lg-2">
+                    <a href="https://www.linkedin.com/in/wojciech-bocho/" class="nav-link me-4 me-lg-0
+                    text-start text-lg-center">
+                    <span>Wizualizacje</span>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a href="https://www.linkedin.com/in/wojciech-bocho/" class="nav-link">Wizualizacje</a>
-                </li>
-                <li class="nav-item">
-                    <a href="https://github.com/newhorizonweb" class="nav-link">Realizacje</a>
+                    <a href="https://github.com/newhorizonweb" class="nav-link me-4 me-lg-0
+                    text-start text-lg-center">
+                        <span>Realizacje</span>
+                    </a>
                 </li>
             </ul>
         </li>
 
         <li class="nav-item container remove-container">
-            <a href="#about-section" class="nav-link">O firmie</a>
+            <a href="#about-section" class="nav-link">
+                <span>O firmie</span>
+            </a>
         </li>
 
         <li class="nav-item container remove-container">
-            <a href="#offer-section" class="nav-link">Realizacje</a>
+            <a href="#offer-section" class="nav-link">
+                <span>Realizacje</span>
+            </a>
         </li>
 
         <li class="nav-item container remove-container">
-            <a href="#contact" class="nav-link">Kontakt</a>
+            <a href="#contact" class="nav-link">
+                <span>Kontakt</span>
+            </a>
         </li>
 
         <li class="search-nav-item nav-item container remove-container">
             <a href="#" class="nav-link search-box">
                 <input type="text" class="search-input">
-                <div class="search-icon"></div>
+                <div class="search-icon ms-lg-2"></div>
             </a>
         </li>
 
@@ -177,7 +193,9 @@
         </div>
 
         <div class="cards d-flex flex-wrap gap-5 m-0">
-            <div class="card col-4 border-0">
+
+            <a href="https://github.com/newhorizonweb" 
+            class="card col-4 border-0 text-decoration-none">
                 <div class="card-icon card-icon1"></div>
 
                 <div class="card-body d-flex flex-column align-items-start p-0">
@@ -185,16 +203,17 @@
 
                     <p class="card-text m-0">Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym wykorzystaniem istniejącej przestrzeni.</p>
 
-                    <a href="https://github.com/newhorizonweb" class="card-link text-decoration-none">
+                    <p class="card-link mb-0">
                         Dowiedz się więcej
                         <span>
                             <img src="int_resources/img/arrow-btn.svg" alt="Arrow Icon">
                         </span>
-                    </a>
+                    </p>
                 </div>
-            </div>
+            </a>
 
-            <div class="card col-4 border-0">
+            <a href="https://github.com/newhorizonweb" 
+            class="card col-4 border-0 text-decoration-none">
                 <div class="card-icon card-icon1"></div>
 
                 <div class="card-body d-flex flex-column align-items-start p-0">
@@ -202,16 +221,17 @@
 
                     <p class="card-text m-0">Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru animowanego w technologii 3D.</p>
 
-                    <a href="https://github.com/newhorizonweb" class="card-link text-decoration-none">
+                    <p class="card-link mb-0">
                         Dowiedz się więcej
                         <span>
                             <img src="int_resources/img/arrow-btn.svg" alt="Arrow Icon">
                         </span>
-                    </a>
+                    </p>
                 </div>
-            </div>
+            </a>
 
-            <div class="card col-4 border-0">
+            <a href="https://github.com/newhorizonweb" 
+            class="card col-4 border-0 text-decoration-none">
                 <div class="card-icon card-icon1"></div>
 
                 <div class="card-body d-flex flex-column align-items-start p-0">
@@ -219,14 +239,15 @@
 
                     <p class="card-text m-0">Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i zaawansowanych technologii.</p>
 
-                    <a href="https://github.com/newhorizonweb" class="card-link text-decoration-none">
+                    <p class="card-link mb-0">
                         Zobacz nasze realizacje
                         <span>
                             <img src="int_resources/img/arrow-btn.svg" alt="Arrow Icon">
                         </span>
-                    </a>
+                    </p>
                 </div>
-            </div>
+            </a>
+
         </div>
     </div>
 </div>
@@ -252,7 +273,7 @@
             </div>
 
             <div class="hero-right h-100 p-0 d-flex align-items-center">
-                <img src="int_resources/img/hero-img1.jpg" alt="Hero Image 1" class="w-100">
+                <img src="int_resources/img/section-img.jpg" alt="Hero Image 1" class="w-100">
             </div>
 
         </div>
