@@ -900,6 +900,8 @@ main{
 
 .gm-img{
     width:100%;
+    height:100%;
+    object-fit:contain;
 }
 
 .gm-btn{
@@ -935,11 +937,6 @@ main{
 }
 
 @media screen and (width < 576px){
-
-    .gm-img{
-        width:auto;
-        height:100%;
-    }
 
     .gm-btn{
         width:auto;
